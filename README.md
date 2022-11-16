@@ -12,26 +12,6 @@ Essa será uma aplicação onde o seu principal objetivo é criar um hook de 
 - reduce
 - context;
 
-<h1 align="center">
-    <a href="#">  </a>
-</h1>
-
-<p align="center"> Carrinho de compras.. </p>
-
-<h4 align="center"> 
-	 Status: Finalizado.
-</h4>
-
-<p align="center">
- <a href="#-about">About</a> •
- <a href="#-Features">Features</a> •
- <a href="#-layout">Layout</a> • 
- <a href="#-tech-stack">Tech Stack</a> • 
- <a href="#-author">Author</a> • 
- <a href="#-license">License</a>
-
-</p>
-
 
 ## Funcionalidades
 
@@ -121,8 +101,25 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 </a>
 
+<h1 align="center">
+    <a href="#">  </a>
+</h1>
 
+<p align="center"> Carrinho de compras.. </p>
 
+<h4 align="center"> 
+	 Status: Finalizado.
+</h4>
+
+<p align="center">
+ <a href="#-about">About</a> •
+ <a href="#-Features">Features</a> •
+ <a href="#-layout">Layout</a> • 
+ <a href="#-tech-stack">Tech Stack</a> • 
+ <a href="#-author">Author</a> • 
+ <a href="#-license">License</a>
+
+</p>
 
 ## 📝 License
 

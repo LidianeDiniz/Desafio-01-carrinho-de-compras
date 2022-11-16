@@ -1,11 +1,25 @@
+
+
+## 💻 Sobre:
+
+Essa será uma aplicação onde o seu principal objetivo é criar um hook de carrinho de compras. Você terá acesso a duas páginas, um componente e um hook para implementar as funcionalidades pedidas.
+
+- React;
+- Routes;
+- components;
+- Props;
+- hooks;
+- reduce
+- context;
+
 <h1 align="center">
     <a href="#">  </a>
 </h1>
 
-<p align="center"> Seu Cardápio digital.. </p>
+<p align="center"> Carrinho de compras.. </p>
 
 <h4 align="center"> 
-	 Status: Em desenvolvimento...
+	 Status: Finalizado.
 </h4>
 
 <p align="center">
@@ -18,36 +32,6 @@
 
 </p>
 
-## 💻 Sobre:
-
-O carrinho de compras é um dos desafios mais comuns no react. Assim, são estudados conceitos de imutabilidade, contextos, redutores, ganchos e outros
-
-- React;
-- Routes;
-- components;
-- Props;
-- hooks;
-- reduce
-- context;
----
-
-## :camera: ScreenShots
-<h1 aling="center">
-  
-  <img style="margin-top:100px;" src="https://user-images.githubusercontent.com/80908772/200186782-e68d1a7a-f5b9-4ed8-8409-00dc994e81da.png"/>
-  <hr/>
-  <img style="margin-top:10px;" src="https://user-images.githubusercontent.com/80908772/200186784-fd6e75ef-015a-4495-ab9e-44244e0ee493.png"/>
-  <hr/>
-  <img style="margin-top:10px;" src="https://user-images.githubusercontent.com/80908772/200186785-3155d3ff-23ab-4c0c-8d65-df90e2f400ad.png"/>
-  <hr/>
-  <img style="margin-top:10px;" src="https://user-images.githubusercontent.com/80908772/200186781-60f887f5-2ca5-497c-aad0-69fa701d356e.png"/>
-</h1>
-<br/>
-<a href='#top'>
-
-:arrow_up: Back to top
-
-</a>
 
 ## Funcionalidades
 
@@ -63,12 +47,6 @@ O carrinho de compras é um dos desafios mais comuns no react. Assim, são estud
 
 
 ---
-
-## 🎨 Layout
-
-
-
-
 
 ## 🚀 Como executar o projeto.
 
@@ -89,10 +67,10 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/LidianeDiniz/Desafio-01-carrinho-de-compars.git
+$ git clone https://github.com/LidianeDiniz/Desafio-01-carrinho-de-compras.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd + sua pasta + git clone https://github.com/LidianeDiniz/Desafio-01-carrinho-de-compars.git
+$ cd + sua pasta + git clone https://github.com/LidianeDiniz/Desafio-01-carrinho-de-compras.git
 
 # Instale as dependências
 $ npm install
@@ -125,9 +103,25 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 ---
 
 
-## 💻 Sobre:
+## :camera: ScreenShots
+<h1 aling="center">
+  
+  <img style="margin-top:100px;" src="https://user-images.githubusercontent.com/80908772/200186782-e68d1a7a-f5b9-4ed8-8409-00dc994e81da.png"/>
+  <hr/>
+  <img style="margin-top:10px;" src="https://user-images.githubusercontent.com/80908772/200186784-fd6e75ef-015a-4495-ab9e-44244e0ee493.png"/>
+  <hr/>
+  <img style="margin-top:10px;" src="https://user-images.githubusercontent.com/80908772/200186785-3155d3ff-23ab-4c0c-8d65-df90e2f400ad.png"/>
+  <hr/>
+  <img style="margin-top:10px;" src="https://user-images.githubusercontent.com/80908772/200186781-60f887f5-2ca5-497c-aad0-69fa701d356e.png"/>
+</h1>
+<br/>
+<a href='#top'>
 
-Essa será uma aplicação onde o seu principal objetivo é criar um hook de carrinho de compras. Você terá acesso a duas páginas, um componente e um hook para implementar as funcionalidades pedidas.
+:arrow_up: Back to top
+
+</a>
+
+
 
 
 ## 📝 License

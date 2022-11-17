@@ -35,7 +35,7 @@ Este projeto é divido em duas partes:
 2. Frontend 
 
 💡Vamos utilizar o JSON Server para simular uma API que possui as informações dos produtos e do estoque. 
-)
+
 
 ### Pré-requisitos
 
@@ -54,6 +54,7 @@ $ cd + sua pasta + git clone https://github.com/LidianeDiniz/Desafio-01-carrinho
 
 # Instale as dependências
 $ npm install
+$ yarn install
 
 # Execute a API
 $ npm run server

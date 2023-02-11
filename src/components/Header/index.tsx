@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MdShoppingBasket } from 'react-icons/md';
@@ -30,3 +31,32 @@ const Header = (): JSX.Element => {
 };
 
 export default Header;
+=======
+import { HeaderContainer, HeaderButton, HeaderCardsContainer } from "./styles";
+import logoCoffeImg from "../../assets/logo-coffe-delivery.svg";
+import { MapPin, ShoppingCart } from "phosphor-react";
+import { NavLink } from "react-router-dom";
+
+export function Header() {
+  return (
+    <HeaderContainer>
+      <NavLink to="/">
+        <img src={logoCoffeImg} alt="" />
+      </NavLink>
+
+      <HeaderCardsContainer>
+        <HeaderButton variant="purple">
+          <MapPin size={22} weight="fill" />
+          Porto Alegre, Rs
+        </HeaderButton>
+
+        <NavLink to="/completeOrder">
+          <HeaderButton variant="yellow">
+            <ShoppingCart size={22} weight="fill" />
+          </HeaderButton>
+        </NavLink>
+      </HeaderCardsContainer>
+    </HeaderContainer>
+  );
+}
+>>>>>>> 739814d8f47a713fb92297cfaa48e6f4f0ee0408

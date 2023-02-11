@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
 
@@ -81,3 +82,20 @@ const Home = (): JSX.Element => {
 };
 
 export default Home;
+=======
+import { CoffeeList } from "./components/CoffeeList";
+import { Intro } from "./components/Intro";
+import { HomeConatiner } from "./styles";
+
+export function HomePage(){
+   
+    return(
+        <HomeConatiner>
+        
+        <Intro/>
+        <CoffeeList/>        
+      
+       </HomeConatiner>
+    )
+}
+>>>>>>> 739814d8f47a713fb92297cfaa48e6f4f0ee0408

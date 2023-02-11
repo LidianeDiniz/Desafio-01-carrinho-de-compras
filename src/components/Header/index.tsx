@@ -1,32 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MdShoppingBasket } from 'react-icons/md';
+import { HeaderContainer, HeaderButton, HeaderCardsContainer } from "./styles";
+import logoCoffeImg from "../../assets/logo-coffe-delivery.svg";
+import { MapPin, ShoppingCart } from "phosphor-react";
+import { NavLink } from "react-router-dom";
 
-import logo from '../../assets/images/logo.svg';
-import { Container, Cart } from './styles';
-import { useCart } from '../../hooks/useCart';
-
-const Header = (): JSX.Element => {
-  const { cart } = useCart();
-  const cartSize = cart.length;
-
+export function Header() {
   return (
-    <Container>
-      <Link to="/">
-        <img src={logo} alt="Rocketshoes" />
-      </Link>
+    <HeaderContainer>
+      <NavLink to="/">
+        <img src={logoCoffeImg} alt="" />
+      </NavLink>
 
-      <Cart to="/cart">
-        <div>
-          <strong>Meu carrinho</strong>
-          <span data-testid="cart-size">
-            {cartSize === 1 ? `${cartSize} item` : `${cartSize} itens`} 
-          </span>
-        </div>
-        <MdShoppingBasket size={36} color="#FFF" />
-      </Cart>
-    </Container>
+      <HeaderCardsContainer>
+        <HeaderButton variant="purple">
+          <MapPin size={22} weight="fill" />
+          Porto Alegre, Rs
+        </HeaderButton>
+
+        <NavLink to="/completeOrder">
+          <HeaderButton variant="yellow">
+            <ShoppingCart size={22} weight="fill" />
+          </HeaderButton>
+        </NavLink>
+      </HeaderCardsContainer>
+    </HeaderContainer>
   );
-};
-
-export default Header;
+}

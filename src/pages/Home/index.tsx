@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
 
 import { ProductList } from './styles';
@@ -27,75 +26,50 @@ const Home = (): JSX.Element => {
   const { addProduct, cart } = useCart();
 
   const cartItemsAmount = cart.reduce((sumAmount, product) => {
-      const newSumAmount = {...sumAmount};
-      newSumAmount[product.id] = product.amount;
-
-      return newSumAmount;
-
+    sumAmount[product.id] = product.amount
+    return sumAmount
   }, {} as CartItemsAmount)
 
   useEffect(() => {
     async function loadProducts() {
-    const response = await api.get<Product[]>('products');
-
-    const data = response.data.map(product => ({
-      ...product,
-      priceFormatted: formatPrice(product.price),
-    }))
-
-    setProducts(data)
+      const response = await api.get('/products');
+      const productsFormated = response.data.map(function(product: Product){
+        return {...product, price: formatPrice(product.price)}
+      })
+      setProducts(productsFormated)
+      
     }
 
     loadProducts();
   }, []);
 
   function handleAddProduct(id: number) {
-    addProduct(id);
+    addProduct(id)
   }
 
   return (
     <ProductList>
       {products.map((product) => (
-        <li key ={product.id}>
-          <img
-            src={product.image}
-            alt={product.title}
-          />
-          <strong>{product.title}</strong>
-          <span>{product.priceFormatted}</span>
-          <button
-            type="button"
-            data-testid="add-product-button"
-            onClick={() => handleAddProduct(product.id)}
-          >
-            <div data-testid="cart-product-quantity">
-              <MdAddShoppingCart size={16} color="#FFF" />
-               {cartItemsAmount[product.id] || 0} 
-            </div>
+        <li key={product.id}>
+        <img src={product.image} alt={product.title} />
+        <strong>{product.title}</strong>
+        <span>{product.price}</span>
+        <button
+          type="button"
+          data-testid="add-product-button"
+          onClick={() => handleAddProduct(product.id)}
+        >
+          <div data-testid="cart-product-quantity">
+            <MdAddShoppingCart size={16} color="#FFF" />
+            {cartItemsAmount[product.id] || 0}
+          </div>
 
-            <span>ADICIONAR AO CARRINHO</span>
-          </button>
-        </li>
+          <span>ADICIONAR AO CARRINHO</span>
+        </button>
+      </li>
       ))}
     </ProductList>
   );
 };
 
 export default Home;
-=======
-import { CoffeeList } from "./components/CoffeeList";
-import { Intro } from "./components/Intro";
-import { HomeConatiner } from "./styles";
-
-export function HomePage(){
-   
-    return(
-        <HomeConatiner>
-        
-        <Intro/>
-        <CoffeeList/>        
-      
-       </HomeConatiner>
-    )
-}
->>>>>>> 739814d8f47a713fb92297cfaa48e6f4f0ee0408

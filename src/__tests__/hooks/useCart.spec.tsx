@@ -144,14 +144,13 @@ describe('useCart Hook', () => {
         expect(mockedToastError).toHaveBeenCalledWith(
           'Erro na adição do produto'
         );
+        expect(result.current.cart).toEqual(
+          expect.arrayContaining(initialStoragedData)
+        );
+        expect(mockedSetItemLocalStorage).not.toHaveBeenCalled();
       },
       { timeout: 200 }
     );
-
-    expect(result.current.cart).toEqual(
-      expect.arrayContaining(initialStoragedData)
-    );
-    expect(mockedSetItemLocalStorage).not.toHaveBeenCalled();
   });
 
   it('should be able to increase a product amount when adding a product that already exists on cart', async () => {
@@ -209,14 +208,8 @@ describe('useCart Hook', () => {
     const productId = 2;
 
     apiMock.onGet(`stock/${productId}`).reply(200, {
-      id: 2,
+      id: 1,
       amount: 1,
-    });
-    apiMock.onGet(`products/${productId}`).reply(200, {
-      id: 2,
-      title: "Tênis VR Caminhada Confortável Detalhes Couro Masculino",
-      price: 139.9,
-      image: "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis2.jpg"
     });
 
     const { result, waitFor } = renderHook(useCart, {
@@ -232,16 +225,15 @@ describe('useCart Hook', () => {
         expect(mockedToastError).toHaveBeenCalledWith(
           'Quantidade solicitada fora de estoque'
         );
+        expect(result.current.cart).toEqual(
+          expect.arrayContaining(initialStoragedData)
+        );
+        expect(mockedSetItemLocalStorage).not.toHaveBeenCalled();
       },
       {
         timeout: 200,
       }
     );
-
-    expect(result.current.cart).toEqual(
-      expect.arrayContaining(initialStoragedData)
-    );
-    expect(mockedSetItemLocalStorage).not.toHaveBeenCalled();
   });
 
   it('should be able to remove a product', () => {
@@ -353,14 +345,13 @@ describe('useCart Hook', () => {
         expect(mockedToastError).toHaveBeenCalledWith(
           'Erro na alteração de quantidade do produto'
         );
+        expect(result.current.cart).toEqual(
+          expect.arrayContaining(initialStoragedData)
+        );
+        expect(mockedSetItemLocalStorage).not.toHaveBeenCalled();
       },
       { timeout: 200 }
     );
-
-    expect(result.current.cart).toEqual(
-      expect.arrayContaining(initialStoragedData)
-    );
-    expect(mockedSetItemLocalStorage).not.toHaveBeenCalled();
   });
 
   it('should not be able to update a product amount when running out of stock', async () => {
@@ -384,14 +375,13 @@ describe('useCart Hook', () => {
         expect(mockedToastError).toHaveBeenCalledWith(
           'Quantidade solicitada fora de estoque'
         );
+        expect(result.current.cart).toEqual(
+          expect.arrayContaining(initialStoragedData)
+        );
+        expect(mockedSetItemLocalStorage).not.toHaveBeenCalled();
       },
       { timeout: 200 }
     );
-
-    expect(result.current.cart).toEqual(
-      expect.arrayContaining(initialStoragedData)
-    );
-    expect(mockedSetItemLocalStorage).not.toHaveBeenCalled();
   });
 
   it('should not be able to update a product amount to a value smaller than 1', async () => {

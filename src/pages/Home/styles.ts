@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-<<<<<<< HEAD
 import { darken } from 'polished';
 
 export const ProductList = styled.ul`
@@ -68,12 +67,3 @@ export const ProductList = styled.ul`
     }
   }
 `;
-=======
-export const HomeConatiner = styled.div`
-
-margin-bottom: 9.8rem;
-`;
-
-
-
->>>>>>> 739814d8f47a713fb92297cfaa48e6f4f0ee0408

@@ -53,7 +53,7 @@ $ npm install
 # Execute a API
 $ npm run server
 $ yarn sever
-# O servidor inciará na porta:3333 - acesse <http://localhost:8000>
+# O servidor inciará na porta:3333 - acesse <http://localhost:3000>
 # Execute a aplicação em modo de desenvolvimento
 $ npm run start
 $ yarn start
